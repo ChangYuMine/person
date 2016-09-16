@@ -11,10 +11,12 @@ public class Brad59 {
 
 	public static void main(String[] args) {
 		
-		String data = "Hello,john";
+		for(int i=0;i>=0;i++){
+		
+		String data = "我正在攻擊你!!";
 		
 		byte[]sendData = data.getBytes();
-		
+				
 		try {
 			DatagramSocket socket 
 			
@@ -26,7 +28,7 @@ public class Brad59 {
 			
 			(sendData,sendData.length,
 					
-					InetAddress.getByName("192.168.0.108"),8888);
+					InetAddress.getByName("111.246.10.73"),8888);
 			
 			socket.send(packet);
 			
@@ -40,8 +42,11 @@ public class Brad59 {
 			
 		} catch (IOException e) {
 			
+			
 		}
-
+			
+		}
+		
 	}
 
 }
