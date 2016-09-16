@@ -5,41 +5,35 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.SocketException;
-import java.net.UnknownHostException;
 
-public class Brad59 {
+public class Brad60 {
 
 	public static void main(String[] args) {
 		
-		String data = "Hello,john";
-		
-		byte[]sendData = data.getBytes();
+		byte[]buf = new byte[1024];
 		
 		try {
 			DatagramSocket socket 
 			
-			= new DatagramSocket();
+			= new DatagramSocket(8888);
 			
 			DatagramPacket packet 
 			
-			= new DatagramPacket
+				= new DatagramPacket(buf, buf.length);
 			
-			(sendData,sendData.length,
-					
-					InetAddress.getByName("192.168.0.108"),8888);
-			
-			socket.send(packet);
+			socket.receive(packet);
 			
 			socket.close();
 			
-			System.out.println("OK");
+			InetAddress urip = packet.getAddress();
+			
+			System.out.println("OK"+urip.getHostAddress());
 			
 		} catch (SocketException e) {
 			
-		} catch (UnknownHostException e) {
-			
 		} catch (IOException e) {
 			
+			System.out.println(e.toString());
 		}
 
 	}
