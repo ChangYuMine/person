@@ -9,9 +9,7 @@ import java.net.SocketException;
 public class Brad60 {
 
 	public static void main(String[] args) {
-		
-		while(true){
-		
+				
 		byte[]buf = new byte[1024];
 		
 		try {
@@ -43,8 +41,6 @@ public class Brad60 {
 		} catch (IOException e) {
 			
 			System.out.println(e.toString());
-			
-			}
 		
 		}
 	}

@@ -11,7 +11,9 @@ public class Brad59 {
 
 	public static void main(String[] args) {
 		
-		for(int i=0;i>=0;i++){
+		//進度
+		//0904_2_30
+		//0904_AM_1hr
 		
 		String data = "我正在攻擊你!!";
 		
@@ -41,9 +43,6 @@ public class Brad59 {
 		} catch (UnknownHostException e) {
 			
 		} catch (IOException e) {
-			
-			
-		}
 			
 		}
 		
