@@ -1,7 +1,12 @@
-package tw.com.google.www._0904;
+package tw.com.google.www_0904;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.InetAddress;
 import java.net.ServerSocket;
+import java.net.Socket;
 
 public class TCPReceiver {
 
@@ -12,16 +17,30 @@ public class TCPReceiver {
 			
 					= new ServerSocket(8888);
 			
-			System.out.println("before");
-			
-			server.accept();
+			Socket socket = server.accept();
 			//重要!!接收動作!!
 			
-			System.out.println("after");
+			InputStream in = socket.getInputStream();
+			
+			InputStreamReader irs = new InputStreamReader(in);
+			
+			BufferedReader read = new BufferedReader(irs);
+			
+			int c;
+			
+			StringBuffer sb = new StringBuffer();
+			
+			while((c=read.read())!=-1){
+				
+				sb.append((char)c);
+				
+			}
+			
+			InetAddress urip = socket.getInetAddress();
 			
 			server.close();
 			
-			System.out.println("OK");
+			System.out.println(urip.getHostAddress()+":"+sb);
 			
 		} catch (IOException e) {
 			
