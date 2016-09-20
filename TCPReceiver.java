@@ -45,8 +45,6 @@ public class TCPReceiver {
 			server.close();
 			
 			bout.close();
-						
-			System.out.println("RecOK");
 		
 		} catch (IOException e) {
 		
@@ -56,36 +54,7 @@ public class TCPReceiver {
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+			
 //傳送訊息範例			
 //		try {
 //			ServerSocket server 

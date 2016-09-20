@@ -2,13 +2,12 @@ package tw.com.google.www_0904;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.net.InetAddress;
 import java.net.Socket;
-import java.net.UnknownHostException;
 
 public class TCPClient {
 
@@ -68,22 +67,59 @@ public class TCPClient {
 		
 	}
 		
+
+//第二段方式，傳送方式快		
+//	long start = System.currentTimeMillis();
+//	
+//	try {
+//		
+//		File sendfile = new File("dir/747.jpg");
+//		
+//		byte[]sendBuf = new byte[(int)sendfile.length()];
+//		
+//		BufferedInputStream bin = 
+//				
+//				new BufferedInputStream
+//				
+//					(new FileInputStream(sendfile));
+//		
+//		bin.read(sendBuf);
+//		
+//		bin.close();
+//				
+//		Socket client = 
+//				
+//				new Socket
+//				
+//					(InetAddress.getByName("127.0.0.1"),6666);
+//		
+//		BufferedOutputStream bout =
+//				
+//				new BufferedOutputStream
+//				
+//					(client.getOutputStream());
+//		
+//		bout.write(sendBuf);
+//		
+//		bout.flush();
+//		
+//		bout.close();
+//		
+//		client.close();
+//		
+//		System.out.println(System.currentTimeMillis()-start);
+//		
+//	} catch (FileNotFoundException e) {
+//		
+//		
+//	} catch (IOException e) {
+//		
+//		System.out.println(e.toString());
+//		
+//	}
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+				
 //傳送訊息範例		
 //		try {
 //			Socket socket 
